@@ -11,7 +11,7 @@ const salt = 12
 const makeSut = (): BcryptAdapter => new BcryptAdapter(salt)
 
 describe('Bcrypt Adapter', () => {
-  test('Should call bcrypt with correct value', async () => {
+  test('Should call bcrypt with correct values', async () => {
     const sut = makeSut()
     const hashSpy = jest.spyOn(bcrypt, 'hash')
     await sut.encrypt('any_value')

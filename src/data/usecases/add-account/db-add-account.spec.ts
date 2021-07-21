@@ -7,7 +7,6 @@ const makeEncrypter = (): Encrypter => {
       return new Promise(resolve => resolve('hashed_password'))
     }
   }
-
   return new EncrypterStub()
 }
 
